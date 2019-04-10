@@ -1,0 +1,22 @@
+{
+  "name": "@area17/a17-lazyload",
+  "description": "A simple, tiny, no dependency, lazy loader - by A17",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "./dist/a17-lazyload.js",
+  "bugs": {
+    "url": "https://code.area17.com/a17/a17-lazyload/issues"
+  },
+  "homepage": "http://slider.dev.area17.com/",
+  "author": "A17 <dev@area17.com> (https://area17.com/)",
+  "repository": {
+    "type": "git",
+    "url": "https://code.area17.com/a17/a17-lazyload"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+  }
+}
