@@ -19,7 +19,9 @@ More detailed instructions on usage are at: [http://lazyload.dev.area17.com/](ht
 
 If you find a bug in a17-lazyload, please add it to [the issue tracker](https://code.area17.com/a17/a17-lazyload/issues) or fork it, fix it and submit a pull request for it (👍).
 
-Tabs are 2 spaces, functions are commented, variables are camel case and its preferred that its easier to read than outright file size being the smallest possible.
+The development script is `dist/a17-lazyload.js`. Tabs are 2 spaces, functions are commented, variables are camel case and its preferred that its easier to read than outright file size being the smallest possible.
+
+Make sure to include a minified version inside of `dist` by running: `npm run minify` (you'll need to `npm run install` to install `terser`). The minified version is added to the git repository for users who aren't using build tools.
 
 ## Support
 
