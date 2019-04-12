@@ -13,10 +13,10 @@
     "type": "git",
     "url": "https://code.area17.com/a17/a17-lazyload"
   },
-  "dependencies": {
-  },
   "devDependencies": {
+    "terser": "^3.17.0"
   },
   "scripts": {
+    "minify": "terser --compress --mangle --ecma 5 --safari10 --verbose --warn --output dist/a17-lazyload.min.js dist/a17-lazyload.js"
   }
 }
