@@ -4,77 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Lazyload</title>
-    <link rel="stylesheet" href="http://html4css.s3.amazonaws.com/html4.min.css">
-    <style>
-      picture,
-      img,
-      iframe {
-        display: block;
-        border: 0 none;
-        opacity: 1;
-        transition: opacity .25s;
-        width: 500px;
-        height: 281px;
-        background: #f2f2f2;
-        outline: 0 none;
-      }
-
-      iframe {
-        width: 560px;
-        height: 315px;
-      }
-
-      img[data-src]:not([src^="data:image"]),
-      img[data-srcset]:not([src^="data:image"]),
-      iframe[data-src] {
-        opacity: 0;
-      }
-
-      img[data-srcset][src=""] {
-        content: url("data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==");
-      }
-
-      #list {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-start;
-        align-content: flex-start;
-        margin: 0 -10px;
-        padding: 0;
-        list-style-type: none;
-      }
-
-      #list li {
-        flex: 0 0 auto;
-        width: calc((100% - 60px)/3);
-        margin: 20px 10px 0;
-        padding: 0;
-      }
-
-      #list span {
-        display: block;
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-bottom: 56.25%;
-        background-color: #f2f2f2;
-      }
-
-      #list img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    </style>
+    <script src="/dist/head.js"></script>
+    <link href="/dist/style.css" rel="stylesheet" />
   </head>
   <body>
 
-      <header>
-        <h1>Lazy load</h1>
-      </header>
+    <header>
+      <h1>Lazy load</h1>
+    </header>
 
-      <p>v2.1.0 / 2018-03-27</p>
+    <main id="content">
 
       <p>Simple, tiny, no dependency, lazy loader. Source code available on <strong><a href="https://github.com/area17/lazyload">GitHub</a></strong>.</p>
 
@@ -287,31 +226,19 @@ img[data-srcset][src=""] {
   &lt;iframe data-src="https://www.youtube.com/embed/Wji-BZ0oCwg?list=PL148kCvXk8pDWYE9q9cNdux5JFmu80kN8" width="560" height="315" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
 </pre>
 
-    <h2>Dynamically added content</h2>
+      <h2>Dynamically added content</h2>
 
-    <p><button id="add">Add</button></p>
-
-    <ul id="list"></ul>
+      <div data-behavior="addItemsToList">
+        <p><button data-addItemsToList-trigger>Add</button></p>
+        <ul class="grid" data-addItemsToList-target></ul>
+      </div>
+    </main>
 
     <footer>
       <small>&copy; AREA 17</small>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js"></script>
-    <script src="/lazyload.js"></script>
-    <script>
-      lazyLoad();
-      document.getElementById('add').addEventListener('click', function(event){
-        event.preventDefault();
-        this.parentNode.parentNode.removeChild(this.parentNode);
-        var li = '<li><span><img data-src="/images/greenflash_800.jpg"></span></li>';
-        var html = li + li + li + li + li + li + li + li + li + li + li + li;
-        var list = document.getElementById('list');
-        list.innerHTML = html;
-        var updatedEvent = document.createEvent('Event');
-        updatedEvent.initEvent('page:updated', true, true);
-        document.dispatchEvent(updatedEvent);
-      }, false);
-    </script>
+    <script src="/dist/a17-lazyload.min.js"></script>
+    <script src="/dist/app.js"></script>
   </body>
 </html>

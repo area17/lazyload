@@ -1,0 +1,154 @@
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl, label, small {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+h1 {
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: -2px;
+}
+
+h2 {
+  font-size: 29px;
+  line-height: 42px;
+}
+
+h3 {
+  font-size: 29px;
+  line-height: 42px;
+  color: #9e9e9e;
+}
+
+h4,
+h5,
+h6 {}
+
+b,
+strong,
+dfn {
+  font-weight: bold;
+}
+
+i,
+em,
+dfn {
+  font-style: italic;
+}
+
+small {
+  display: block;
+}
+
+a {
+  text-decoration: underline;
+  color: #111;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #9e9e9e;
+}
+
+img,
+figure,
+picture {
+  display: block;
+  border: 0 none;
+  margin-top: 20px;
+  max-width: 500px;
+  height: auto;
+}
+
+li img {
+  margin-top: 0;
+}
+
+svg {
+  display: none;
+}
+
+ul,
+ol {
+  padding: 0 2em;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-top: 0;
+  padding-bottom: 10px;
+}
+
+ul {
+  list-style-type : disc;
+}
+
+ol {
+  list-style-type : decimal;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  padding-left: 2em;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  margin-top: 20px;
+}
+
+pre,
+code {
+  font : 15px/20px 'lucida console', monospace;
+  background-color: #f2f2f2;
+  padding: 5px 8px;
+}
+
+pre {
+  white-space: pre;
+}
+
+
+
+
+
+
+
+picture,
+img,
+iframe {
+  display: block;
+  border: 0 none;
+  opacity: 1;
+  transition: opacity .25s;
+  width: 500px;
+  height: 281px;
+  background: #f2f2f2;
+  outline: 0 none;
+}
+
+iframe {
+  width: 560px;
+  height: 315px;
+}
+
+img[data-src]:not([src^="data:image"]),
+img[data-srcset]:not([src^="data:image"]),
+iframe[data-src] {
+  opacity: 0;
+}
+
+img[data-srcset][src=""] {
+  content: url("data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==");
+}
+
+
