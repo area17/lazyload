@@ -1,0 +1,17 @@
+.container,
+%container {
+  margin-right: auto;
+  margin-left: auto;
+
+  @each $name, $point in $breakpoints {
+    @include breakpoint('#{$name}') {
+      @if (map-get($main-col-widths, $name) == 'fluid') {
+        width: calc(100vw - #{map-get($outer-gutters, $name) * 2});
+      } @else {
+        width: map-get($main-col-widths, $name);
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
+}
