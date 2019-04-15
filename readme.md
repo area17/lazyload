@@ -15,6 +15,27 @@ When it runs out of elements to watch, the loop ends.
 
 More detailed instructions on usage are at: [http://lazyload.dev.area17.com/](http://lazyload.dev.area17.com/)
 
+## Usage
+
+```html
+<script src="path/to/a17-lazyload.min.js"></script>
+<script>
+  lazyload();
+</script>
+```
+
+Also available via NPM:
+
+```sh
+npm install @area17/a17-lazyload
+```
+
+```js
+import lazyload from '@area17/a17-lazyload';
+
+lazyload();
+```
+
 ## Issues/Contributing/Discussion
 
 If you find a bug in a17-lazyload, please add it to [the issue tracker](https://code.area17.com/a17/a17-lazyload/issues) or fork it, fix it and submit a pull request for it (👍).
@@ -29,9 +50,8 @@ IE10+ because of the use of `requestAnimationFrame` if no `IntersectionObserver`
 
 ## Coming soon
 
-Work in check for `loading="lazy"` support: [https://addyosmani.com/blog/lazy-loading/](https://addyosmani.com/blog/lazy-loading/)
-
-Use a `MutationObserver` to check for dynamically added elements to check.
+* Work in check for `loading="lazy"` support: [https://addyosmani.com/blog/lazy-loading/](https://addyosmani.com/blog/lazy-loading/)
+* Use a `MutationObserver` to check for dynamically added elements to check.
 
 ## Filesize
 

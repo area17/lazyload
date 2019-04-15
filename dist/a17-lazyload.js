@@ -212,7 +212,7 @@
    * @public
    * @param {object} options (see readme)
    */
-  var a17_lazyload = function(opts) {
+  var lazyload = function(opts) {
     for(var item in opts) {
       if(opts.hasOwnProperty(item)) {
         options[item] = opts[item];
@@ -233,9 +233,9 @@
 
   if (typeof exports !== 'undefined') {
     // Node.js
-    module.exports = a17_lazyload;
+    module.exports = lazyload;
   } else {
     // Browser
-    window.lazyload = a17_lazyload;
+    window.lazyload = lazyload;
   }
 })();
