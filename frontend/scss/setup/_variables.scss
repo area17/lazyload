@@ -6,31 +6,31 @@ $base-height: 5;
 // recommended xxlarge is a px value and xsmall is fluid
 $main-col-widths: (
   xxlarge: 1440px,
-  xlarge: 1220px,
-  large: 930px,
-  medium: 590px,
-  small: 374px,
+  xlarge: 'fluid',
+  large: 'fluid',
+  medium: 'fluid',
+  small: 'fluid',
   xsmall: 'fluid'
 );
 
 // Inner gutters, in px or vw, of each breakpoint
 $inner-gutters: (
-  xxlarge: 40px,
-  xlarge: 40px,
-  large: 30px,
-  medium: 30px,
+  xxlarge: 20px,
+  xlarge: 20px,
+  large: 20px,
+  medium: 20px,
   small: 20px,
   xsmall: 20px
 );
 
 // Outer gutters, in px or vw, of each breakpoint
 $outer-gutters: (
-  xxlarge: 200px,
-  xlarge: 150px,
-  large: 100px,
-  medium: 100px,
-  small: 50px,
-  xsmall: 40px
+  xxlarge: 0,
+  xlarge: 100px,
+  large: 80px,
+  medium: 50px,
+  small: 30px,
+  xsmall: 20px
 );
 
 // How many columns are in each breakpoint

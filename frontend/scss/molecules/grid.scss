@@ -15,18 +15,6 @@
   padding: 0;
 }
 
-.grid span {
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
-  background-color: #f2f2f2;
-}
-
-.grid img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.grid .img-container {
+  margin-top: 0;
 }

@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@area17/a17-helpers": "^1.0.2"
+    "@area17/a17-helpers": "^1.0.2",
+    "@area17/a17-lazyload": "^0.1.0"
   },
   "devDependencies": {
-    "@area17/a17-boilerplate": "^6.2.4"
+    "@area17/a17-boilerplate": "^6.2.5"
   },
   "scripts": {
     "init": "a17-bp init",

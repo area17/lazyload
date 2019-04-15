@@ -6,8 +6,8 @@ const addItemsToList = createBehavior(
     addItems(e) {
       e.preventDefault();
       this.$trigger.removeEventListener('click', this.addItems);
-      this.node.removeChild(this.$trigger);
-      const li = '<li><span><img data-src="/images/greenflash_800.jpg"></span></li>';
+      this.node.removeChild(this.$trigger.parentNode);
+      const li = '<li><span class="img-container"><img data-src="/images/greenflash_800.jpg"></span></li>';
       const html = li + li + li + li + li + li + li + li + li + li + li + li;
       this.$target.innerHTML = html;
       document.dispatchEvent(new CustomEvent('page:updated'));
