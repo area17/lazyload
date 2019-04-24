@@ -102,11 +102,11 @@ $breakpoints-with-directions: get-breakpoint-directions();
     @media #{$str} {
       @content;
     }
-  } @elseif ($option == 'hover') {
+  } @else if ($option == 'hover') {
     @media (-moz-touch-enabled: 0), (pointer: fine) {
       @content;
     }
-  } @elseif ($option == 'ie11') {
+  } @else if ($option == 'ie11') {
     @media screen and (-ms-high-contrast: none), screen and (-ms-high-contrast: active) {
       @content;
     }
