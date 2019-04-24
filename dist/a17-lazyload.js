@@ -72,6 +72,7 @@
     var srcset = el.getAttribute('data-srcset');
     var src = el.getAttribute('data-src');
     var dlazyload = el.getAttribute('data-lazyload') !== null;
+    var autoplay = el.getAttribute('autoplay');
     //
     if (srcset) {
       // if source set, update and try picturefill
@@ -90,6 +91,12 @@
       el.setAttribute('data-lazyloaded','');
       el.removeEventListener('load', _loaded);
       _removeDataAttrs(el);
+    }
+    if (autoplay) {
+      try {
+        el.play();
+      } catch(err) {
+      }
     }
   }
 
