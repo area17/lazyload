@@ -6,6 +6,7 @@
     rootMargin: '0px', // IntersectionObserver option
     threshold: 0, // IntersectionObserver option
     maxFrameCount: 10, // 60fps / 10 = 6 times a second
+    forceAutoplayVideoPlay: true, // forces a lazy loaded `autoplay` video to play
   };
 
   // set up
@@ -92,9 +93,12 @@
       el.removeEventListener('load', _loaded);
       _removeDataAttrs(el);
     }
-    if (autoplay) {
+    if (options.forceAutoplayVideoPlay && autoplay && el.paused) {
       try {
-        el.play();
+        el.load();
+        if (el.paused) {
+          el.outerHTML = el.outerHTML;
+        }
       } catch(err) {
       }
     }
