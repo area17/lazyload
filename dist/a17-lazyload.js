@@ -73,7 +73,6 @@
     var srcset = el.getAttribute('data-srcset');
     var src = el.getAttribute('data-src');
     var dlazyload = el.getAttribute('data-lazyload') !== null;
-    var autoplay = el.getAttribute('autoplay');
     //
     if (srcset) {
       // if source set, update and try picturefill
@@ -93,10 +92,11 @@
       el.removeEventListener('load', _loaded);
       _removeDataAttrs(el);
     }
-    if (options.forceAutoplayVideoPlay && autoplay && el.paused) {
+    if (el.autoplay && el.paused) {
+      // it might be that Safari on iOS won't auto play..
       try {
         el.load();
-        if (el.paused) {
+        if (el.paused && options.forceAutoplayVideoPlay) {
           el.outerHTML = el.outerHTML;
         }
       } catch(err) {
