@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function(){
   rootMargin: '0px', // IntersectionObserver option
   threshold: 0, // IntersectionObserver option
   maxFrameCount: 10, // 60fps / 10 = 6 times a second
+  forceAutoplayVideoPlay: true // force autoplay of autoplay videos
 };
 lazyload(options);</pre>
 
@@ -83,6 +84,8 @@ lazyload(options);</pre>
           <dd><em>integer/array</em> - <a href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver" target="_blank">IntersectionObserver</a> <a href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/thresholds" target="_blank">threshold</a> option.</dd>
         <dt><code>maxFrameCount</code></dt>
           <dd><em>integer</em> - as <code>requestAnimationFrame</code> runs as the monitor refreshes, this could be 60 times a second, to throttle this we can tell the script every NUM of frames.</dd>
+        <dt><code>forceAutoplayVideoPlay</code> <em>&gt; 0.1.2</em></dt>
+          <dd><em>boolean</em> - defaults to <code>true</code>, iOS Safari doesn't always autoplay lazy loaded videos with the autoplay attribute, this will attempt to force it, but beware, it potentially replaces the video in order to force Safari to play it, which will likely mean any event listeners you have on the video will be lost. You may need to alter your JavaScript or disable this option.</dd>
       </dl>
 
       <hr>
