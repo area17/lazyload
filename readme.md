@@ -1,7 +1,7 @@
 # A17 Lazy Load
 
 * Demos [https://area17.github.io/lazyload/](https://area17.github.io/lazyload/)
-* Issues [https://code.area17.com/a17/a17-lazyload/issues](https://code.area17.com/a17/a17-lazyload/issues)
+* Issues [https://github.com/area17/lazyload/issues](https://github.com/area17/lazyload/issues)
 
 ## Introduction
 
@@ -38,7 +38,7 @@ lazyload();
 
 ## Issues/Contributing/Discussion
 
-If you find a bug in a17-lazyload, please add it to [the issue tracker](https://code.area17.com/a17/a17-lazyload/issues) or fork it, fix it and submit a pull request for it (👍).
+If you find a bug in a17-lazyload, please add it to [the issue tracker](https://github.com/area17/lazyload/issues) or fork it, fix it and submit a pull request for it (👍).
 
 The development script is `dist/a17-lazyload.js`. Tabs are 2 spaces, functions are commented, variables are camel case and its preferred that its easier to read than outright file size being the smallest possible.
 
