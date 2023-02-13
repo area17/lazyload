@@ -17,3 +17,7 @@ All notable changes to this project will be documented in this file.
 ## 0.1.3
 
 * First trying to load the video, then replacing if option set
+
+## 0.1.4
+
+* Moving repo and demo page to Github

@@ -1,6 +1,6 @@
 # A17 Lazy Load
 
-* Demos [http://lazyload.dev.area17.com/](http://lazyload.dev.area17.com/)
+* Demos [https://area17.github.io/lazyload/](https://area17.github.io/lazyload/)
 * Issues [https://code.area17.com/a17/a17-lazyload/issues](https://code.area17.com/a17/a17-lazyload/issues)
 
 ## Introduction
@@ -13,7 +13,7 @@ If `data-srcset` to `srcset` and `typeof picturefill`, attempts to run `picturef
 
 When it runs out of elements to watch, the loop ends.
 
-More detailed instructions on usage are at: [http://lazyload.dev.area17.com/](http://lazyload.dev.area17.com/)
+More detailed instructions on usage are at: [https://area17.github.io/lazyload/](https://area17.github.io/lazyload/)
 
 ## Usage
 
