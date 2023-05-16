@@ -21,3 +21,7 @@ All notable changes to this project will be documented in this file.
 ## 0.1.4
 
 * Moving repo and demo page to Github
+
+## 0.1.5
+
+* Adds namespace to config for custom attribute naming. Namespace is inserted after `data-` to the following attributes: `data-src`, `data-srcset`, `data-lazyload`, `data-lazyloaded`

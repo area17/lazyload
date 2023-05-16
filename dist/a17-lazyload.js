@@ -1,6 +1,7 @@
 (function () {
 
   var options = {
+    namespace: '', // add custom name to attributes ie: data-'namespace'-src
     pageUpdatedEventName: 'page:updated', // how your app tells the rest of the app an update happened
     elements: 'img[data-src], img[data-srcset], source[data-srcset], iframe[data-src], video[data-src], [data-lazyload]', // maybe you just want images?
     rootMargin: '0px', // IntersectionObserver option
@@ -50,9 +51,9 @@
    * @param {Node} element to update
    */
   function _removeDataAttrs(el) {
-    el.removeAttribute('data-src');
-    el.removeAttribute('data-srcset');
-    el.removeAttribute('data-lazyload');
+    el.removeAttribute(`data-${ options.namespace ? options.namespace + '-' : '' }src`);
+    el.removeAttribute(`data-${ options.namespace ? options.namespace + '-' : '' }srcset`);
+    el.removeAttribute(`data-${ options.namespace ? options.namespace + '-' : '' }lazyload`);
   }
 
   /**
@@ -70,9 +71,9 @@
    * @param {Node} element to update
    */
   function _updateEl(el) {
-    var srcset = el.getAttribute('data-srcset');
-    var src = el.getAttribute('data-src');
-    var dlazyload = el.getAttribute('data-lazyload') !== null;
+    var srcset = el.getAttribute(`data-${ options.namespace ? options.namespace + '-' : '' }srcset`);
+    var src = el.getAttribute(`data-${ options.namespace ? options.namespace + '-' : '' }src`);
+    var dlazyload = el.getAttribute(`data-${ options.namespace ? options.namespace + '-' : '' }lazyload`) !== null;
     //
     if (srcset) {
       // if source set, update and try picturefill
@@ -88,7 +89,7 @@
       el.src = src;
     }
     if (dlazyload) {
-      el.setAttribute('data-lazyloaded','');
+      el.setAttribute(`data-${ options.namespace ? options.namespace + '-' : '' }lazyloaded`,'');
       el.removeEventListener('load', _loaded);
       _removeDataAttrs(el);
     }
