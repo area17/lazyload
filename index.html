@@ -456,6 +456,7 @@ document.addEventListener('DOMContentLoaded', function(){
     <p>These options are the defaults, and can be overridden on init:</p>
 
     <pre><code class="language-javascript">var options = {
+  namespace: '', // add custom name to attributes ie: data-'namespace'-src
   pageUpdatedEventName: 'page:updated', // how your app tells the rest of the app an update happened
   elements: 'img[data-src], img[data-srcset], source[data-srcset], iframe[data-src], video[data-src], [data-lazyload]', // maybe you just want images?
   rootMargin: '0px', // IntersectionObserver option
@@ -466,6 +467,8 @@ document.addEventListener('DOMContentLoaded', function(){
 lazyload(options);</code></pre>
 
     <dl>
+      <dt><code>namespace</code></dt>
+        <dd><em>string</em> - a string for custom attributes naming, ie: data-'namespace'-src. Defaults to none. This is applied to all data attributes: src, srcset, lazyload, lazyloaded</dd>
       <dt><code>pageUpdatedEventName</code></dt>
         <dd><em>string</em> - an event name to listen for when the page has new content that might need to be lazy loaded. If set to `false` lazyLoad will only run on initial page load.</dd>
       <dt><code>elements</code></dt>
