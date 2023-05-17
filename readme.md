@@ -55,6 +55,6 @@ IE10+ because of the use of `requestAnimationFrame` if no `IntersectionObserver`
 
 ## Filesize
 
-* ~7kb uncompressed
+* ~8kb uncompressed
 * ~3kb minified
 * ~1kb minified and gzipped
