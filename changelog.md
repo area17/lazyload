@@ -29,3 +29,7 @@ All notable changes to this project will be documented in this file.
 ## 0.1.6
 
 * Adds namespace to config for custom attribute naming. Namespace is inserted after `data-` to the following attributes: `data-src`, `data-srcset`, `data-lazyload`, `data-lazyloaded`
+
+## 0.1.7
+
+Version patch to republish failed publish of 0.1.6 due to network errors.
