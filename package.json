@@ -1,7 +1,7 @@
 {
   "name": "@area17/a17-lazyload",
   "description": "A simple, tiny, no dependency, lazy loader - by A17",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "license": "MIT",
   "main": "./dist/a17-lazyload.js",
   "bugs": {
